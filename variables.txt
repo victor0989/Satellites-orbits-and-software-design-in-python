@@ -1,0 +1,21 @@
+Naming Convention
+
+any_variable_name - lower case with underscore
+This includes working variables and instantiated objects.
+field_name - lower case with underscore Any field of an object should be lower case.
+function_name - lower case with underscore
+Class_Type - upper case with underscore
+The underscores are chosen here to permit the inclusion of acronyms if needed and to maintain symmetry with field name styling.
+Package_Name - upper case with underscore
+For example folders within the SUAVE package.
+
+Prototype
+Either a new function or class. You may want to test these within a separate folder. If you are developing a new analysis approach, for example for aerodynamics or weights, you can usually start with a function. If you are working off of an object like a wing, you can abstract the objects as needed. Generally the lowest level object you’ll use is the SUAVE.Core.Data class.
+A lot of development can be accomplished in a local environment.
+
+Initial Integration
+Once you’re comfortable that your new feature works robustly, and that it has been tested, it’s time to integrate it into SUAVE. Here are some tips for identifying where it could live.
+SUAVE.Methods - if it’s a python function. Ping the forum if you want to double check your decision!
+SUAVE.Analyses - if it’s an object that manages an analysis like aerodynamics
+SUAVE.Components - if it’s a data storage container for a vehicle component like a wing or landing gear
+SUAVE.Attributes - if it’s a data storage container for any other type of object, like atmospheres or water
